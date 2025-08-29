@@ -1,3 +1,5 @@
-FROM tiangolo/nginx-rtmp
-COPY nginx.conf /etc/nginx/nginx.conf
-RUN mkdir -p /tmp/hls
+FROM gabekangas/owncast:latest
+
+EXPOSE 8080 1935
+
+CMD ["/app/owncast"]
